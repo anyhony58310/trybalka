@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Trybalka</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="nav container">
+            <!-- Logo -->
+            <a href="" class="logo">
+                <img src="./logo.png" alt="TryBalka - Éducation canine">
+            </a>
+
+            <button class="burger" aria-label="Ouvrir le menu">
+                ☰
+            </button>
+
+            <!-- Menu -->
+            <ul class="nav-links">
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#seances">Séances</a></li>
+                <li><a href="#tarifs">Tarifs</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#avis">Avis</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="banniere">
+        <img class="banniere_photo" src="./banniere.png" alt="banniere">
+        <a href="#contact" class="btn-banniere">Prendre rendez-vous !</a>
+    </div>
+
+    <div class="contact" id="contact">
+        <div class="contact-card">
+            <h2>Besoin d’informations ?</h2>
+            <p class="subtitle">Envie de prendre rendez-vous pour votre chien ?</p>
+
+            <div class="contact-infos">
+                <p>
+                    📧 <span>Email :</span><br>
+                    <a href="mailto:trybalka1858@gmail.com">trybalka1858@gmail.com</a>
+                </p>
+
+                <p>
+                    📞 <span>Téléphone :</span><br>
+                    <a href="tel:0650546431">06 50 54 64 31</a>
+                </p>
+            </div>
+
+            <p class="subtitle">Suivez nous aussi sur :</p>
+
+            <div class="socials">
+                <a href="https://facebook.com" target="_blank" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+
+                <a href="https://tiktok.com" target="_blank" aria-label="TikTok">
+                    <i class="fa-brands fa-tiktok"></i>
+                </a>
+            </div>
+        </div>
+        <div class="propositions">
+            <img class="propositions_photo" src="./propositions.png" alt="propositions">
+        </div>
+    </div>
+
+    <div class="separation">
+        <img class="emprunte_photo" src="./empruntes.png" alt="empruntes">
+    </div>
+
+    <div class="decouverte">
+        <div class="decouverte_image">
+            <img class="decouverte_photoUne" src="./chien1.png" alt="chien1">
+        </div>
+        <div class="decouverte_texte">
+            <p>
+                <b>Trybalka</b> est une passion pour les chiens et un engagement à les aider à s’épanouir. Chaque chien est unique, et nous adaptons notre approche pour répondre à ses besoins tout en renforçant le lien avec son maître.
+
+                Nos séances d’éducation canine personnalisées visent à instaurer confiance et harmonie, résoudre les problèmes de comportement, socialiser votre chiot ou renforcer les bons comportements, toujours avec bienveillance.
+
+                <br><br><b>Nous proposons</b> également des activités ludiques et stimulantes : jeux collectifs, sorties en groupe, aventures en pleine nature… autant de moments pour que votre chien se défoule, socialise et découvre de nouveaux environnements.
+
+                Enfin, Trybalka offre un service de garderie et de conseils adaptés à vos besoins. Parce que chaque chien mérite d’être heureux et équilibré, et chaque maître mérite un compagnon épanoui.
+            </p>
+        </div>
+    </div>
+
+    <div class="grid">
+        <img class="chiens3" src="./1.PNG" alt="chien 1">
+        <img class="chiens2" src="./2.PNG" alt="chien 2">
+        <img class="chiens" src="./3.PNG" alt="chien 3">
+    </div>
+
+    <div class="video1">
+        <video class="videoChien1" autoplay muted loop id="bg-video" no-controls>
+            <source src="./chien1.mp4" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture de vidéos.
+        </video>
+    </div>
+
+    <div class="services" id="services">
+        <h2 id="espace">Nos services</h2>
+        <div class="services-div">
+            
+        </div>
+    </div>
+
+</body>
+<script>
+const burger = document.querySelector('.burger');
+const navLinks = document.querySelector('.nav-links');
+const navItems = document.querySelectorAll('.nav-links li a'); // tous les liens du menu
+
+// Toggle ouverture/fermeture du menu au clic sur le burger
+burger.addEventListener('click', () => {
+    navLinks.classList.toggle('open');
+    burger.textContent = navLinks.classList.contains('open') ? '✖' : '☰';
+});
+
+// Fermer le menu automatiquement au clic sur un lien
+navItems.forEach(item => {
+    item.addEventListener('click', () => {
+        if (navLinks.classList.contains('open')) {
+            navLinks.classList.remove('open');  // ferme le menu
+            burger.textContent = '☰';           // remet le burger
+        }
+    });
+});
+</script>
+
+
+</html>
+

@@ -1,0 +1,358 @@
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Header global */
+.header {
+    padding: 0.25rem 2rem;
+    background-color: #e2e2e2;
+    border: none;
+}
+
+/* Container Flex pour logo + menu + bouton */
+.nav {
+    display: flex;
+    align-items: center;       /* centre verticalement */
+}
+
+/* Logo */
+.logo img {
+    height: 100px; /* ajuste selon ton logo */
+}
+
+/* Menu horizontal */
+.nav-links {
+    display: flex;             /* rend les <li> horizontal */
+    gap: 2rem;                 /* espace entre les boutons */
+    list-style: none;
+    margin-left: auto;
+}
+
+/* Style des liens */
+.nav-links li a {
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: background 0.3s, color 0.3s;
+    color: #2F5D50;
+}
+
+.nav-links li a:hover {
+    background-color: #C97B63;
+    color: #FFFFFF;
+}
+
+.burger {
+    margin-left: auto;
+    font-size: 2rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #2F5D50;
+    display: none; /* caché sur desktop */
+}
+
+.banniere {
+    position: relative;   /* référence pour le bouton */
+}
+
+.banniere_photo {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.btn-banniere {
+    position: absolute;
+    top: 27%;
+    left: 73%;
+
+    transform: translate(-50%, -50%);
+
+    padding: clamp(0.6rem, 1vw, 1rem) clamp(1rem, 2vw, 2rem);
+    font-size: clamp(0.8rem, 1.2vw, 1.1rem);
+
+    background-color: #C97B63;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 8px;
+    font-size: clamp(0.35rem, 1.2vw, 1.1rem);
+}
+
+.contact {
+    padding: 2rem 2rem;
+    display: flex;
+}
+
+.contact-card {
+    background-color: white;
+    width: 50%;
+    text-align: center;
+}
+
+h2 {
+    color: #2F5D50;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    margin-bottom: 0.5rem;
+}
+
+.contact-card .subtitle {
+    color: #666;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+.contact-infos p {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    color: #333;
+}
+
+.contact-infos span {
+    font-weight: 600;
+    color: #2F5D50;
+}
+
+.contact-infos a {
+    color: #C97B63;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.contact-infos a:hover {
+    text-decoration: underline;
+}
+
+.propositions {
+    width: 50%;
+}
+
+.propositions_photo {
+    width: 100%;
+    display: block;
+    height: auto;
+    border-radius: 50px;
+}
+
+.socials {
+    margin-top: -15px;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+}
+
+.socials a {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: #2F5D50;
+    color: white;
+    text-decoration: none;
+
+    border-radius: 50%;
+    font-size: 1.2rem;
+
+    transition: transform 0.2s, background 0.3s;
+}
+
+.socials a:hover {
+    background-color: #C97B63;
+    transform: translateY(-3px);
+}
+
+.decouverte {
+    margin-top: 50px;
+    display: flex;
+    padding: 2rem 2rem;
+}
+
+.decouverte_image {
+    display: flex;
+    width: 50%;
+    justify-content: center;
+    align-items: center;
+}
+
+.decouverte_photoUne {
+    width: 70%;
+    border-radius: 20px;                           /* bords arrondis */
+    box-shadow: 10px 10px 30px rgba(0,0,0,0.3);   /* ombre initiale */
+    transform: rotate(-5deg) scale(1);            /* légère inclinaison initiale */
+    transform-origin: center;                      /* point de rotation au centre */
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), 
+                box-shadow 0.6s ease;  
+}
+
+.decouverte_photoUne:hover {
+    transform: rotate(0deg) scale(1.1);           /* redressement + zoom */
+    box-shadow: 15px 15px 40px rgba(0,0,0,0.4);  /* ombre plus prononcée */
+    cursor: pointer; 
+}
+
+.decouverte_texte {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    text-align: justify;
+}
+
+.separation {
+    display: block;
+}
+
+.grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.chiens {
+    width: 20%;
+    height: 20%;
+}
+
+.chiens2 {
+    width: 21%;
+    height: 21%;
+}
+
+.chiens3 {
+    width: 19.5%;
+    height: 19.5%;  
+}
+
+.video1 {
+    margin-top: 5%;
+}
+
+.videoChien1 {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#espace {
+    margin-bottom: 10px;
+}
+
+.services {
+    display: block;
+    text-align: center;
+}
+
+.services-div {
+    margin: 2rem 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
+@media screen and (min-width: 912px) {
+    .separation {
+        display: none;
+    }
+}
+
+/* Responsive - Mobile */
+@media (max-width: 911px) {
+
+    .burger {
+        display: block;
+        margin-left: auto;
+        z-index: 1001;
+    }
+
+    .nav {
+        position: relative;
+    }
+
+    .nav-links {
+        position: fixed; /* 🔥 clé */
+        top: 0;
+        right: -350px; /* 🔥 complètement hors écran */
+
+        height: 100vh;
+        width: 100px;
+
+        background-color: #c2c2c2;
+
+        flex-direction: column;
+        gap: 1rem;
+        padding: 6rem 1.5rem 1.5rem;
+
+        transition: right 0.3s ease;
+        z-index: 1000;
+    }
+
+    /* Menu ouvert */
+    .nav-links.open {
+        right: 0;
+    }
+
+    .contact {
+        display: block;
+    }
+
+    .contact-card {
+        width: 100%;
+        padding: 0rem;
+    }
+
+    .propositions {
+        width: 100%;
+    }
+
+    .propositions_photo {
+        margin-top: 20px;
+    }
+
+    .decouverte {
+        display: block;
+        margin-top: -5px;
+    }
+
+    .decouverte_image {
+        width: 100%;
+        
+    }
+
+    .decouverte_photoUne {
+        width: 200px;        /* largeur du cercle final */
+        height: 200px;       /* hauteur égale à la largeur pour le cercle */
+        object-fit: cover;   /* recadre l'image pour remplir le cercle sans déformation */
+        border-radius: 50%;
+    }
+
+    .decouverte_texte {
+        width: 100%;
+    }
+
+    .separation {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .emprunte_photo {
+        width: 25%;
+    }
+
+    .grid {
+        margin-top: -8%;
+    }
+}
