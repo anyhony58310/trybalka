@@ -259,6 +259,14 @@ h2 {
     .separation {
         display: none;
     }
+
+    .bannieretelephone {
+        display: none;
+    }
+
+    .gridtelephone {
+        display: none;
+    }
 }
 
 /* Responsive - Mobile */
@@ -299,6 +307,10 @@ h2 {
 
     .contact {
         display: block;
+    }
+
+    .banniere {
+        display: none;
     }
 
     .contact-card {
@@ -346,12 +358,24 @@ h2 {
     }
 
     .grid {
+        display: none;
+    }
+
+    .gridtelephone {
         display: flex;
         flex-direction: column;
-        margin-top: -8%;
+        margin: 2rem 2rem;
     }
 
     .chiens, .chiens2, .chiens3 {
-        width: 75%;
+        width: 60%;
+        height: 60%;
+        border-radius: 50%;
+        border: none;
+        background: transparent;
+    }
+
+    .chiens2 {
+        margin-left: 40%;
     }
 }
